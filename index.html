@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Balancing Act: Distribution-Guided Debiasing in Diffusion Models</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -41,7 +41,7 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
-
+<!-- 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -80,7 +80,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -88,37 +88,34 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Balancing Act: Distribution-Guided Debiasing in Diffusion Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a >Rishubh Parihar</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a >Abhijnya Bhat</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a >Saswat Mallick</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a >Abhipsa Basu</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a >Jogendra Nath Kundu</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a >R. Venkatesh Babu</a><sup>1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Indian Institute of Science, </span>
+            <span class="author-block"><sup>2</sup>Meta Reality Labs</span>
           </div>
 
-          <div class="column has-text-centered">
+          <!-- <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
+              PDF Link.
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -137,7 +134,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
+              Video Link.
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -147,7 +144,7 @@
                   <span>Video</span>
                 </a>
               </span>
-              <!-- Code Link. -->
+              Code Link.
               <span class="link-block">
                 <a href="https://github.com/google/nerfies"
                    class="external-link button is-normal is-rounded is-dark">
@@ -157,7 +154,7 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
+              Dataset Link.
               <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
@@ -168,14 +165,14 @@
                   </a>
             </div>
 
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -189,9 +186,9 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
-
+<!-- 
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -247,7 +244,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -258,38 +255,37 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Diffusion Models (DMs) have emerged as powerful generative models with unprecedented image generation 
+            capability. These models are widely used for data augmentation
+            and creative applications. However, DMs reflect the biases
+            present in the training datasets. This is especially concerning in the context of faces, where the DM prefers one 
+            demographic subgroup vs others (eg. female vs male). 
           </p>
+
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
+            In this work, we present a method for debiasing DMs without relying on additional data or model retraining. 
+            Specifically, we propose Distribution Guidance, which enforces the generated images to follow the prescribed 
+            attribute distribution. To realize this, we build on the key insight that the latent features of denoising 
+            UNet hold rich demographic semantics,
+            and the same can be leveraged to guide debiased generation. We train Attribute Distribution Predictor (ADP) - a
+            small mlp that maps the latent features to the distribution
+            of attributes. ADP is trained with pseudo labels generated
+            from existing attribute classifiers. 
+          </p> 
+            
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            The proposed Distribution Guidance with ADP enables us to do fair generation.
+            Our method reduces bias across single/multiple attributes
+            and outperforms the baseline by a significant margin. Further, we present a downstream task of training a 
+            fair attribute classifier by rebalancing the training set with our
+            generated data
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
+    <!-- Paper video.
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
@@ -299,17 +295,17 @@
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+    / Paper video.
   </div>
-</section>
-
+</section> -->
+<!-- 
 
 <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
+      Visual Effects.
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
@@ -323,9 +319,9 @@
           </video>
         </div>
       </div>
-      <!--/ Visual Effects. -->
+      / Visual Effects.
 
-      <!-- Matting. -->
+      Matting.
       <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
@@ -343,14 +339,14 @@
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+    / Matting.
 
-    <!-- Animation. -->
+    Animation.
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation</h2>
 
-        <!-- Interpolating. -->
+        Interpolating.
         <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
@@ -382,9 +378,9 @@
           </div>
         </div>
         <br/>
-        <!--/ Interpolating. -->
+        / Interpolating.
 
-        <!-- Re-rendering. -->
+        Re-rendering.
         <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
@@ -403,14 +399,14 @@
                     type="video/mp4">
           </video>
         </div>
-        <!--/ Re-rendering. -->
+        / Re-rendering.
 
       </div>
     </div>
-    <!--/ Animation. -->
+    / Animation.
 
 
-    <!-- Concurrent Work. -->
+    Concurrent Work.
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
@@ -435,7 +431,7 @@
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
+    / Concurrent Work.
 
   </div>
 </section>
@@ -445,18 +441,18 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+  author    = {Rishubh Parihar, Abhijnya Bhat, Saswat Mallick, Abhipsa Basu, Jogendra Nath Kundu and R. Venkatesh Babu},
+  title     = {Balancing Act: Distribution-Guided Debiasing in Diffusion Models},
+  journal   = {CVPR},
+  year      = {2024},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <!-- <div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -464,7 +460,7 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
