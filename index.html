@@ -174,19 +174,49 @@
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/interpolate_end.jpg"
+    <div class="content has-text-centered">
+      <img src="./static/images/[cvpr24]-debdiff-fig1-teaser.jpg"
                  class="interpolation-image"
-                 alt="Interpolation end reference image."/>
+                 alt="Interpolation end reference image."
+                 width=400/>
                  
-      <h2 class="subtitle has-text-centered">
+      <!-- <h2 class="subtitle has-text-centered">
         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
         free-viewpoint
         portraits.
-      </h2>
+      </h2> -->
     </div>
   </div>
 </section>
+<!-- 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <img src="./static/images/[cvpr24]-debdiff-fig1-teaser.jpg"
+                    class="interpolation-image"
+                    alt="Interpolation end reference image."/
+                    width="400">
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+            <img src="./static/images/[cvpr24]-camera-ready-sd-results.jpg"
+                    class="interpolation-image"
+                    alt="Interpolation end reference image."/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
 
 <!-- 
 <section class="hero is-light is-small">
@@ -341,46 +371,47 @@
     </div>
     / Matting.
 
-    Animation.
+    Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Stable Diffusion Results</h2> 
 
-        Interpolating.
-        <h3 class="title is-4">Interpolating states</h3>
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Attribute Debiasing</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            Gender Balancing Results: We specify different professions as prompts and balance the generations across gender.
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
+        <!-- <div class="columns is-vcentered interpolation-panel"> -->
+          <!-- <div class="column is-3 has-text-centered"> -->
+          <div class="content has-text-centered"></div>
+            <img src="./static/images/[cvpr24]-camera-ready-sd-results.jpg"
                  class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
+                 alt="Interpolate start reference image."
+                 width = 400/>
+            <!-- <p>Start Frame</p> -->
           </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
+        <!-- </div> -->
+          <!-- <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper"> -->
+              <!-- Loading... -->
+            <!-- </div>
             <input class="slider is-fullwidth is-large is-info"
                    id="interpolation-slider"
                    step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
+          </div> -->
+          <!-- <div class="column is-3 has-text-centered">
             <img src="./static/images/interpolate_end.jpg"
                  class="interpolation-image"
                  alt="Interpolation end reference image."/>
             <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        / Interpolating.
+          </div> -->
+        <!-- </div> -->
+        <!-- <br/> -->
+        <!-- / Interpolating. -->
 
-        Re-rendering.
+        <!-- Re-rendering.
         <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
@@ -398,15 +429,15 @@
             <source src="./static/videos/replay.mp4"
                     type="video/mp4">
           </video>
-        </div>
-        / Re-rendering.
+        </div> -->
+        <!-- / Re-rendering. -->
 
       </div>
     </div>
-    / Animation.
+    <!-- / Animation. -->
 
 
-    Concurrent Work.
+    <!-- Concurrent Work.
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
