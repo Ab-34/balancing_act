@@ -375,6 +375,51 @@
     Animation. -->
     <!-- <div class="columns is-centered"> -->
       <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2> 
+        <h3 class="title is-4">1. Training H-space classifier (ADP)</h3>
+        
+        <div class="content has-text-justified">
+          <p>
+            Images of each class are embedded into the H-space to obtain their corresponding H-vectors.
+            A linear classifier is trained on these H-vectors, conditioned by the timestep of each h-vector.
+          </p>
+        </div>
+
+        
+        <div class="container is-max-desktop">
+          <div class="content has-text-centered">
+            <img src="./static/images/method_1.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."
+                 width = 600/>
+          </div>
+        </div>
+
+        <h3 class="title is-4">2. Distribution Guidance in the H-space</h3>
+        
+        <div class="content has-text-justified">
+          <p>
+            The H-vectors of a batch of images are passed through the ADP to obtain a prediction of the distribution of the batch.
+            A loss between the predicted distribution and the reference distribution is used to guide the H-vectors to follow the reference distribution.
+            A linear classifier is trained on these H-vectors, conditioned by the timestep of each h-vector.
+          </p>
+        </div>
+
+        
+        <div class="container is-max-desktop">
+          <div class="content has-text-centered">
+            <img src="./static/images/method_2.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."
+                 width = 700/>
+          </div>
+        </div>
+            <!-- <p>Start Frame</p> -->
+          <!-- </div> -->
+
+
+      </div>
+      <div class="column is-full-width">
         <h2 class="title is-3">Stable Diffusion Results</h2> 
 
         <!-- Interpolating. -->
